@@ -14,27 +14,24 @@ class Counter extends Component {
 		// increments after waiting for one second
 	};
 
+	incrementCount = (e) => {
+		e.preventDefault();
+		this.props.increment(this.props.count);
+	};
+	decrementCount = (e) => {
+		e.preventDefault();
+		this.props.decrement(this.props.count);
+	};
 	render() {
+		console.log('Props from Counter Component', this.props.count);
 		// Fill in the two button onClick methods
 		// Upon clicking these buttons, the count
 		// should decrement or increment accordingly
 		return (
 			<p>
 				Clicked: {this.props.count} times
-				<button
-					onClick={() => {
-						/* Fill me in  for INCREMENT*/
-					}}
-				>
-					+
-				</button>
-				<button
-					onClick={() => {
-						/* Fill me in for DECREMENT*/
-					}}
-				>
-					-
-				</button>
+				<button onClick={this.incrementCount}>+</button>
+				<button onClick={this.decrementCount}>-</button>
 				{/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
 				{/* <button onClick={this.incrementIfOdd}>

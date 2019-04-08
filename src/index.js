@@ -25,3 +25,9 @@ ReactDOM.render(
 	</Provider>,
 	document.getElementById('root')
 );
+
+//The general flow of steps will be
+// 1 - to create your store,
+// 2 - create your reducers,
+// 3 - create your containers,
+// 4 - and then create the action creators
