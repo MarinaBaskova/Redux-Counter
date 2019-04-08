@@ -14,12 +14,10 @@ class Counter extends Component {
 		// increments after waiting for one second
 	};
 
-	incrementCount = (e) => {
-		e.preventDefault();
+	incrementCount = () => {
 		this.props.increment(this.props.count);
 	};
-	decrementCount = (e) => {
-		e.preventDefault();
+	decrementCount = () => {
 		this.props.decrement(this.props.count);
 	};
 	render() {
