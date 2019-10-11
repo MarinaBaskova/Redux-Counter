@@ -1,3 +1,5 @@
+// APP
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
@@ -18,8 +20,14 @@ const store = createStore(counter);
 // is passing its state to. The Provider component is also
 // where the store "lives".
 ReactDOM.render(
-  <Provider store={store}>
-    <Counter />
-  </Provider>,
-  document.getElementById('root')
+	<Provider store={store}>
+		<Counter />
+	</Provider>,
+	document.getElementById('root')
 );
+
+//The general flow of steps will be
+// 1 - to create your store,
+// 2 - create your reducers,
+// 3 - create your containers,
+// 4 - and then create the action creators
